@@ -9,6 +9,7 @@ def decode_char(mcode)
                 '----.' => '9', '.-.-.-' => '.', '--..--' => ',', '..--..' => '?' }
   morsecode[mcode]
 end
+
 def decode_word(mword)
   letters = mword.split
   words = ''
@@ -18,3 +19,16 @@ def decode_word(mword)
   words
 end
 
+def decode_message(message)
+  words = message.split('  ')
+  d_message = ''
+  words.each do |word|
+    d_message += "#{decode_word(word)} "
+  end
+  d_message
+end
+
+puts decode_char('.-')
+puts decode_word('-- -.--')
+puts decode_message('-- -.--   -. .- -- .')
+puts decode_message('   .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
