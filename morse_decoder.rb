@@ -29,6 +29,8 @@ def decode_message(message)
 end
 
 puts decode_char('.-')
+puts decode_char('..')
 puts decode_word('-- -.--')
+puts decode_word('.-- .')
 puts decode_message('-- -.--   -. .- -- .')
 puts decode_message('   .-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
